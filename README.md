@@ -12,28 +12,24 @@ The getInfected() method in the main program reads the CSV file, extracts the ti
 
 ## Predictive models
 Two prediction models are implemented for the two following scenarios.
-1. Do-nothing model: This model represents the natural progression of the COVID-19 outbreak with no interventions (such as lockdowns or vaccination) being applied. It fictitiously models the natural course by calculating the new number of infected cases based on the average ratios of numbers on consecutive days over the past four days.
+1. Do-nothing model: This model represents the natural progression of the COVID-19 outbreak with no interventions (such as lockdowns or vaccination) being applied. It fictitiously models the natural course by calculating the new number of infected cases based on the average ratios of numbers on consecutive days over the past four days. In particular, the number of infected cases 𝑛(𝑑) on day 𝑑 could be
+computed as
+
 ![Do-nothing model formula](https://i.imgur.com/h6tjU5f.png)
-2. S-curve model: This model represents the potential results of proper interventions from governmental policies, such as closures of schools and businesses, work-from-home orders, and encouragement of social distancing and vaccination. It consists of non-negative parameters (S, D, L, M) and projects the number of cases on a given day using a specific formula.
+
+2. S-curve model: This model represents the potential results of proper interventions from governmental policies, such as closures of schools and businesses, work-from-home orders, and encouragement of social distancing and vaccination. It consists of non-negative parameters (S, D, L, M) and projects the number of cases on a given day using a specific formula.In particular, the model consists of the non-negative parameters: 𝑆, 𝐷, 𝐿, 𝑀 and projects the number cases 𝑠(𝑑) on day 𝑑 according to the following formula:
+
 ![S-Curve model formula](https://i.imgur.com/fVzv50N.png)
 
+This function models the progression of the controlled COVID-19 epidemic (number of confirmed cases) in one wave, starting from S cases at time d = -∞, sharply increasing to the center of the S-curve shape (S + M/2) at day d = D, and then slowly saturating off while still increasing to the final value of S + M. The parameter L determines the speed at which the curve approaches and diverges from the transition point at the center. A higher value of L results in a more abrupt transition past the mid-point value of S + M/2. 
+
 ![Example of S-Curve](https://i.imgur.com/EndmKd7.png)
-## Running the program
 
-Instructions for how to run the COVID-19 progression predictor program.
+The blue plot in the figure shows an S curve with parameters S = 10, D = 30, L = 0.5, M = 30,000, and the red plot shows an S curve with parameters S = 10, D = 60, L = 0.1, M = 10,000. The assumption underlying this model is that interventions such as lockdowns and vaccination can slow the progression of the epidemic by reducing the slope of the curve after passing the mid-point, ultimately reaching the end of the current wave of the epidemic.
 
-## Built With
+## Reference
+For further information about S-curve functions, we recommend visiting the following websites:
 
-List of tools and libraries used in the project, including Java.
-
-## Contributing
-
-Instructions for how to contribute to the project.
-
-## License
-
-Include information about the license that the project is released under.
-
-## Acknowledgments
-
-Credit to anyone whose code was used, or any other resources that were helpful in the creation of the project.
+* https://en.wikipedia.org/wiki/Sigmoid_function
+* https://stats.areppim.com/glossaire/scurve_def.htm
+* A paper from [sciencedirect.com] (https://www.sciencedirect.com/science/article/pii/S1877705811001597?ref=pdf_download&fr=RR-2&rr=78328542bfab4b83)
