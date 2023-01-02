@@ -38,4 +38,4 @@ For further information about S-curve functions, we recommend visiting the follo
 
 * https://en.wikipedia.org/wiki/Sigmoid_function
 * https://stats.areppim.com/glossaire/scurve_def.htm
-* A paper from [sciencedirect.com] (https://www.sciencedirect.com/science/article/pii/S1877705811001597?ref=pdf_download&fr=RR-2&rr=78328542bfab4b83)
+* A paper from [sciencedirect.com](https://www.sciencedirect.com/science/article/pii/S1877705811001597?ref=pdf_download&fr=RR-2&rr=78328542bfab4b83)
