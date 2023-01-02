@@ -13,9 +13,11 @@ The getInfected() method in the main program reads the CSV file, extracts the ti
 ## Predictive models
 Two prediction models are implemented for the two following scenarios.
 1. Do-nothing model: This model represents the natural progression of the COVID-19 outbreak with no interventions (such as lockdowns or vaccination) being applied. It fictitiously models the natural course by calculating the new number of infected cases based on the average ratios of numbers on consecutive days over the past four days.
+![Do-nothing model formula](https://i.imgur.com/h6tjU5f.png)
 2. S-curve model: This model represents the potential results of proper interventions from governmental policies, such as closures of schools and businesses, work-from-home orders, and encouragement of social distancing and vaccination. It consists of non-negative parameters (S, D, L, M) and projects the number of cases on a given day using a specific formula.
+![S-Curve model formula](https://i.imgur.com/fVzv50N.png)
 
-![Example of S-Curve](https://imgur.com/a/iT91vKW)
+![Example of S-Curve](https://i.imgur.com/EndmKd7.png)
 ## Running the program
 
 Instructions for how to run the COVID-19 progression predictor program.
