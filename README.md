@@ -28,7 +28,7 @@ computed as
 This function models the progression of the controlled COVID-19 epidemic (number of confirmed cases) in one wave, starting from S cases at time d = -∞, sharply increasing to the center of the S-curve shape (S + M/2) at day d = D, and then slowly saturating off while still increasing to the final value of S + M. The parameter L determines the speed at which the curve approaches and diverges from the transition point at the center. A higher value of L results in a more abrupt transition past the mid-point value of S + M/2. 
 
 <p align="center">
-![Example of S-Curve](https://i.imgur.com/EndmKd7.png)
+    <img src="https://i.imgur.com/EndmKd7.png">
 </p>
 
 The blue plot in the figure shows an S curve with parameters S = 10, D = 30, L = 0.5, M = 30,000, and the red plot shows an S curve with parameters S = 10, D = 60, L = 0.1, M = 10,000. The assumption underlying this model is that interventions such as lockdowns and vaccination can slow the progression of the epidemic by reducing the slope of the curve after passing the mid-point, ultimately reaching the end of the current wave of the epidemic.
